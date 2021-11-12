@@ -1,4 +1,4 @@
-import { status, resFailure } from "../helpers/status";
+import { status } from "../helpers/status";
 
 const statusNotFound = (req, res) => {
   res.status(status.NOTFOUND).json({
