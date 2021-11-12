@@ -21,13 +21,16 @@ const corsOptions = { exposedHeaders: ["Authorization", "App-Control"] };
 app.use(cors(corsOptions));
 
 app.use(insertLog);
+
 //router
 import indexRouter from "./src/routes/index";
+import moviesRouter from "./src/routes/movies";
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 app.use("*", cors());
-app.use(`${prefix}/`, indexRouter);
+app.use(`${prefix}`, indexRouter);
+app.use(`${prefix}`, moviesRouter);
 
 app.use(statusNotFound);

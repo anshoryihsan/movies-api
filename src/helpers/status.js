@@ -1,18 +1,18 @@
-import { response } from "express";
-
 const status = {
   OK: 200,
   BADREQUEST: 400,
+  NOTFOUND: 404,
   INTERNALSERVERERROR: 500,
 };
 
-const resSuccess = (res, status, message, data = null) => {
-  const json = { success: true, message };
-  return res.status(status).json(data ? { ...json, data } : json);
-};
-const resFailure = (res, status, message, data = null) => {
-  const json = { success: false, message };
-  return res.status(status).json(data ? { ...json, data } : json);
+const response = {
+  success: (data = null, message) => {
+    const json = { success: true, message };
+    return data ? { ...json, data } : json;
+  },
+  failure: (message) => {
+    return { success: false, message };
+  },
 };
 
-export { status, resSuccess, resFailure };
+export { status, response };

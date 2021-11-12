@@ -1,10 +1,7 @@
-import { status } from "../helpers/status";
+import { status, response } from "../helpers/status";
 
 const statusNotFound = (req, res) => {
-  res.status(status.NOTFOUND).json({
-    success: false,
-    message: "404 Not Found",
-  });
+  res.status(status.NOTFOUND).send(response.failure("404 Not Found"));
 };
 
 export default statusNotFound;

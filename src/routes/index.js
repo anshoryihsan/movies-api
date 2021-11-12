@@ -1,13 +1,11 @@
 import express from "express";
-import { status } from "../helpers/status";
+import { status, response } from "../helpers/status";
 const router = express.Router();
 
 router.get("/", async (req, res) => {
-  return res.status(status.OK).send({
-    success: true,
-    messages: "API running successfully",
-    data: {},
-  });
+  return res
+    .status(status.OK)
+    .send(response.success(null, "API running successfully"));
 });
 
 export default router;
