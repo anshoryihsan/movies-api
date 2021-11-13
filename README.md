@@ -1,17 +1,17 @@
 # menggunakan api
 
-alamat url api : https://answebresapimovies.herokuapp.com/api/v1
+- alamat url api : https://answebresapimovies.herokuapp.com/api/v1
 ada 2 fungsi endpoin yang disediakan
 
 1. mencari filem berdasarkan nama
-   method:GET
-   endpoint:/search?name=
-   keterangan parameter: name -> judul filem.
+   - method:GET
+   - endpoint:/search?name=
+   - keterangan parameter: name -> judul filem.
 
 2. melihat detail dari filem yang diinginkan
-   method:GET
-   endpoint:/detail?imdbID=
-   keterangan parameter: imdbID -> id dari filem
+   - method:GET
+   - endpoint:/detail?imdbID=
+   - keterangan parameter: imdbID -> id dari filem
 
 # Cara install dan menjalankan poject
 
