@@ -1,6 +1,6 @@
 # menggunakan api
 
-alamat url api :
+alamat url api : https://answebresapimovies.herokuapp.com/api/v1
 ada 2 fungsi endpoin yang disediakan
 
 1. mencari filem berdasarkan nama
@@ -13,7 +13,7 @@ ada 2 fungsi endpoin yang disediakan
    endpoint:/detail?imdbID=
    keterangan parameter: imdbID -> id dari filem
 
-# Cara install dan menjalankan
+# Cara install dan menjalankan poject
 
 Download projek:
 
@@ -29,8 +29,19 @@ Jalankan project:
 ~$ npm start
 ```
 
-# mengsiapkan database
+# database project
 
 ```
-CREATE DATABASE localdata;
+~$ CREATE DATABASE localdata;
+
+~$ USE localdata;
+
+~$ CREATE TABLE localdataa.NewTable (
+      id INT auto_increment NOT NULL,
+      created_at varchar(100) DEFAULT 'current_timestamp()' NULL,
+      endpoint varchar(100) NULL,
+      CONSTRAINT NewTable_PK PRIMARY KEY (id)
+   )
 ```
+
+note:api yang sudah di deploy ada sedikit masalah di dabase karena menggunakan public dabase db4free sehingga lama untuk mengaksessnya.
