@@ -36,7 +36,7 @@ Jalankan project:
 
 ~$ USE localdata;
 
-~$ CREATE TABLE localdata.NewTable (
+~$ CREATE TABLE localdata.log (
       id INT auto_increment NOT NULL,
       created_at varchar(100) DEFAULT 'current_timestamp()' NULL,
       endpoint varchar(100) NULL,
