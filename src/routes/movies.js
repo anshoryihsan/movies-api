@@ -1,7 +1,8 @@
 import { Router } from "express";
-import { byName } from "../controllers/moviesController";
+import { byName, byDetail } from "../controllers/moviesController";
 const router = Router();
 
 router.get("/search", byName);
+router.get("/detail", byDetail);
 
 export default router;
